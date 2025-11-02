@@ -1,0 +1,126 @@
+{
+  "global": {
+    "loglevel": "warn",
+    "sessionSecret": "JLMEQRITJ7K5CYCBB44AZ40",
+    "frontPopupEnable": true,
+    "frontPopupTitle": "Account Required",
+    "frontPopupContent": "<p>This is now a restricted site. </p><p>To apply for access please contact pagermon@icloud.com</p>",
+    "searchLocation": "top",
+    "theme": "compact",
+    "monitorName": "PagerMon",
+    "SpecificAliasRefresh": true,
+    "faKey": "baa3e49b34"
+  },
+  "database": {
+    "file": "./messages.db",
+    "type": "sqlite3",
+    "aliasRefreshRequired": 0
+  },
+  "messages": {
+    "maxLimit": 120,
+    "defaultLimit": 30,
+    "duplicateFiltering": false,
+    "duplicateLimit": 10,
+    "duplicateTime": 60,
+    "rotationEnabled": true,
+    "rotateDays": 7,
+    "rotateKeep": 4,
+    "replaceText": [
+      {
+        "match": "\\w\\d{11}\\b",
+        "replace": "",
+        "selected": false
+      },
+      {
+        "match": "\\bE\\d{11}\\b",
+        "replace": ""
+      },
+      {
+        "match": "F\\d{9}",
+        "replace": "",
+        "selected": false,
+        "highlight": ""
+      },
+      {
+        "match": "SIG0",
+        "replace": "Cardiac Arrest",
+        "highlight": "true",
+        "selected": false
+      },
+      {
+        "match": "Marong",
+        "highlight": "true",
+        "replace": "Marong",
+        "selected": false
+      }
+    ],
+    "pdwMode": true,
+    "adminShow": true,
+    "HideCapcode": false,
+    "HideSource": false,
+    "apiSecurity": true
+  },
+  "auth": {
+    "registration": true,
+    "user": "admin",
+    "encPass": "$2a$08$De/aXnQkZIEbQ9p8J22tHuzLltqIbsAxE2CGgRMPLaaIwwHmVrpsu",
+    "keys": [
+      {
+        "name": "AV",
+        "key": "1W4MPI7QTUDC3LNIERIUE7NK"
+      },
+      {
+        "name": "EAS",
+        "key": "1LIQAWKMDYAO8GNM2J31ITTS"
+      }
+    ]
+  },
+  "monitoring": {
+    "azureEnable": false,
+    "azureKey": "",
+    "gaEnable": false,
+    "gaTrackingCode": ""
+  },
+  "plugins": {
+    "Pushover": {
+      "enable": true,
+      "pushAPIKEY": "ay7w8j1usoqqhyqg14k2547fyhhtom"
+    },
+    "RegexReplace": {
+      "enable": false
+    },
+    "Filter": {
+      "enable": false,
+      "ignoreallbutAddress": "Marong"
+    },
+    "Gotify": {
+      "enable": false
+    },
+    "Template": {
+      "enable": false
+    },
+    "MessageRepeat": {
+      "enable": true,
+      "repeatURI": "http://192.168.0.5:3003/api/messages",
+      "repeatAPIKEY": "7A2QE1IXJ7CW3OI0ASFJ4I68",
+      "repeatUUID": "norepeat"
+    },
+    "AdvancedWebhook": {
+      "enable": false
+    },
+    "SimpleWebhook": {
+      "enable": false
+    },
+    "MicrosoftTeams": {
+      "enable": false
+    },
+    "Prowl": {
+      "enable": false
+    }
+  },
+  "aliases": {
+    "templates": [
+      {}
+    ]
+  }
+}
